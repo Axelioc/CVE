@@ -7,7 +7,7 @@
 
 ### Vulnerability details
 
-A vulnerability was determined in Netgear DGN1000WW_V1.1.00.45.img. This impacts the function ping_test of the file setup.cgi. This manipulation of the argument c4_IPAddr causes command injection. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized.
+A vulnerability was determined in Netgear DGN1000WW_V1.1.00.45. This impacts the function ping_test of the file setup.cgi. This manipulation of the argument c4_IPAddr causes command injection. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized.
 
 ![1756293462445](image/ping_test/1756293462445.png)
 ![1756293485571](image/ping_test/1756293485571.png)
