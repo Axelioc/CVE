@@ -7,7 +7,7 @@
 
 ### Vulnerability details
 
-A vulnerability was determined in Tenda AC6V2.0 V15.03.06.23_multi. Specifically, the function WifiWpsOOB within the httpd binary is affected. This function improperly handles user-supplied input passed through the index argument, causing a stack-based buffer overflow. By supplying an overly long string to the index parameter via a crafted HTTP request, an attacker can overwrite the return address on the stack. This vulnerability can be exploited remotely, leading to denial of service or, potentially, arbitrary code execution with root privileges.
+A vulnerability was determined in Tenda AC6V2.0 V15.03.06.23_multi. Specifically, the function formWifiWpsOOB within the httpd binary is affected. This function improperly handles user-supplied input passed through the index argument, causing a stack-based buffer overflow. By supplying an overly long string to the index parameter via a crafted HTTP request, an attacker can overwrite the return address on the stack. This vulnerability can be exploited remotely, leading to denial of service or, potentially, arbitrary code execution with root privileges.
 
 ![1780234544917](image/WifiWpsOOB/1780234544917.png)
 
