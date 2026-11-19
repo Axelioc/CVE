@@ -116,7 +116,7 @@ The PoC of the previous section delivers its ten frames while this console is ru
 
 In this capture the entries outside the marked window arrive about one per second. Between the two marked timestamps, 06:56.03 and 06:58.09, ten handler lines appear in about two seconds: the ten injected frames, each accepted and consumed in silence, with no rejection event anywhere in the capture.
 
-The same frame shape sent to a ground command of the same application produces the opposite outcome. The contrast uses SET_SOURCE of TIME, function code 4 at message ID 0x1805, delivered by the attached send_hdr_frames.py --mid=0x1805 --fc=4. No new handler line appears and the console prints the rejection event instead:
+The same frame shape sent to a ground command of the same application produces the opposite outcome. The contrast uses SET_STATE of TIME, function code 4 at message ID 0x1805, delivered by the attached send_hdr_frames.py --mid=0x1805 --fc=4. No new handler line appears and the console prints the rejection event instead:
 
 ```
 EVS Port1 1980-012-15:16:49.50947 66/1/CFE_TIME 49: Invalid msg length: ID = 0x1805,  CC = 4,  Len = 8,  Expected = 10
