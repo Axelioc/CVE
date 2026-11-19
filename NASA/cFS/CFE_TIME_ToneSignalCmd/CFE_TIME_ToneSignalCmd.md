@@ -33,7 +33,7 @@ The message ID of the branch is `0x1810`, `CFE_PLATFORM_TIME_CMD_MIDVAL(TONE_CMD
 
 Configuration-dependent behavior:
 
-- In `AT_TONE_WILL_BE` missions, a ground-injected frame directly triggers `CFE_TIME_ToneVerify()` and, on a successful pairing, `CFE_TIME_ToneUpdate()` — the same path that promotes attacker-supplied pending time values into the active time reference. Together with the DATA_CMD branch reported separately in CFE_TIME_ToneDataCmd, both halves of the tone/data pairing become attacker-controlled.
+- In `AT_TONE_WILL_BE` missions, a ground-injected frame directly triggers `CFE_TIME_ToneVerify()` and, on a successful pairing, `CFE_TIME_ToneUpdate()` — the same path that promotes attacker-supplied pending time values into the active time reference. Together with the equally unguarded DATA_CMD branch at line 255, both halves of the tone/data pairing become attacker-controlled.
 - In missions where `AT_TONE_WILL_BE` is false — the sample configuration, `example_mission_cfg.h:466-467`, where `AT_TONE_WAS=true` — the forged signal still increments `ToneSignalCounter`: tone health bookkeeping is attacker-writable, and the frame is consumed in silence with no length validation.
 
 The branch belongs to the unguarded internal family: `ONEHZ_CMD` at line 241, `DATA_CMD` at line 255 and `SEND_CMD` at line 270, the last compiled only in `CFE_PLATFORM_TIME_CFG_SERVER` builds.
